@@ -1,0 +1,20 @@
+ubuntu 22.04 版本部署说明
+
+# 基础 python, ffmpeg torch 环境安装
+git clone https://github.com/Winfredy/SadTalker.git
+
+cd SadTalker 
+
+conda create -n sadtalker python=3.8
+
+conda activate sadtalker
+
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+
+conda install ffmpeg
+
+pip install -r requirements.txt
+
+pip install TTS -i https://pypi.tuna.tsinghua.edu.cn/simple // 使用清华大学镜像源
+
+#
